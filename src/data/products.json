@@ -1,0 +1,26 @@
+[
+  {
+    "id": "00001",
+    "title": "Amazon.com",
+    "url": "https://www.amazon.com",
+    "niche": "eCommerce",
+    "askingPrice": "$100,000,000,000",
+    "avgNetRevenue": "$10,000,000",
+    "range": "$500,000 - $1,000,000",
+    "monetization": "Selling stuff",
+    "siteAge": "15 years",
+    "multiple": "10000x"
+  },
+  {
+    "id": "00002",
+    "title": "Microsoft Corporation",
+    "url": "https://www.microsoft.com",
+    "niche": "software",
+    "askingPrice": "$100,000,000,000",
+    "avgNetRevenue": "$10,000,000",
+    "range": "$500,000 - $1,000,000",
+    "monetization": "Partially-working OS",
+    "siteAge": "30 years",
+    "multiple": "10000x"
+  }
+]
