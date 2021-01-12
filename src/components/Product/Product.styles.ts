@@ -45,6 +45,10 @@ export const productItemMedium = css`
 export const productImageContainer = css`
   flex-basis: 568px;
   margin-right: 24px;
+  margin-bottom: -200px;
+  padding: 24px;
+  border-radius: 15px;
+  background: var(--color-primary);
 
   @media (max-width: 600px) {
     margin: 0 auto;

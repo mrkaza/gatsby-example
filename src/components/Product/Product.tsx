@@ -1,6 +1,6 @@
 import React from 'react';
 import * as product from './Product.styles';
-import { Image } from '../Image';
+import { Image } from 'components';
 
 export interface ProductType {
   id?: string;
