@@ -5,8 +5,14 @@ module.exports = {
     title: `Gatsby Default Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
+    siteUlr: `https://www.example.com`,
   },
   plugins: [
+    { resolve: `gatsby-plugin-sitemap`, exclude: [`/sample`] },
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      policy: [{ userAgent: `*`, disallow: `/sample` }],
+    },
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     {

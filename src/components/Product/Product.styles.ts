@@ -11,6 +11,10 @@ export const productGrid = css`
   column-gap: 24px;
 
   @media (min-width: 480px) {
+    display: flex;
+  }
+  @media (min-width: 600px) {
+    display: grid;
     grid-template-columns: auto auto;
   }
 `;
@@ -30,27 +34,17 @@ export const productItemSmall = css`
   }
 `;
 
-export const productItemMedium = css`
-  display: none;
-
-  @media (max-width: 480px) {
-    display: block;
-  }
-
-  @media (min-width: 600px) {
-    display: block;
-  }
-`;
-
 export const productImageContainer = css`
   flex-basis: 568px;
-  margin-right: 24px;
-  margin-bottom: -200px;
-  padding: 24px;
-  border-radius: 15px;
-  background: var(--color-primary);
+  margin: 0 auto;
+  padding: 0;
 
-  @media (max-width: 600px) {
-    margin: 0 auto;
+  @media (min-width: 600px) {
+    margin: 0;
+    margin-right: 24px;
+    margin-bottom: -200px;
+    padding: 24px;
+    border-radius: 15px;
+    background: var(--color-primary);
   }
 `;

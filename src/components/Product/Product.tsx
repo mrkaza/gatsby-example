@@ -47,7 +47,7 @@ export const Product: React.FC<ProductType> = ({
             <h1>Avg net revenue</h1>
             <p>{avgNetRevenue}</p>
           </div>
-          <div css={product.productItemMedium}>
+          <div>
             <h1>Range</h1>
             <p>{range}</p>
           </div>
