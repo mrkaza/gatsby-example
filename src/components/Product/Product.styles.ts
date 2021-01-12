@@ -1,5 +1,10 @@
 import { css } from '@emotion/react';
 
+export const product = css`
+  max-width: 1028px;
+  margin: 0 auto;
+`;
+
 export const productGrid = css`
   display: grid;
   grid-template-columns: auto;

@@ -1,7 +1,6 @@
 import React from 'react';
-import { Layout } from './Layout';
-import * as product from 'style/product';
-import { Image } from './Image';
+import * as product from './Product.styles';
+import { Image } from '../Image';
 
 export interface ProductType {
   id?: string;
@@ -28,7 +27,7 @@ export const Product: React.FC<ProductType> = ({
   multiple,
 }) => {
   return (
-    <Layout>
+    <section css={product.product}>
       <h1>{title}</h1>
       <p>
         {url} | {niche}
@@ -66,6 +65,6 @@ export const Product: React.FC<ProductType> = ({
           </div>
         </div>
       </div>
-    </Layout>
+    </section>
   );
 };

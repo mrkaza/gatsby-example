@@ -1,3 +1,1 @@
-export * from './product';
-export * from './utils';
-export * from './layout';
+export * from './globals.styles';
