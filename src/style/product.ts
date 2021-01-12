@@ -11,8 +11,10 @@ export const productGrid = css`
 `;
 
 export const productWrapper = css`
-  display: flex;
-  align-items: center;
+  @media (min-width: 600px) {
+    display: flex;
+    align-items: center;
+  }
 `;
 
 export const productItemSmall = css`
@@ -32,5 +34,14 @@ export const productItemMedium = css`
 
   @media (min-width: 600px) {
     display: block;
+  }
+`;
+
+export const productImageContainer = css`
+  flex-basis: 568px;
+  margin-right: 24px;
+
+  @media (max-width: 600px) {
+    margin: 0 auto;
   }
 `;

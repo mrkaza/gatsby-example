@@ -34,8 +34,9 @@ export const Product: React.FC<ProductType> = ({
         {url} | {niche}
       </p>
       <hr />
+
       <div css={product.productWrapper}>
-        <div>
+        <div css={product.productImageContainer}>
           <Image />
         </div>
         <div css={product.productGrid}>
