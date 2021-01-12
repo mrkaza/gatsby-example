@@ -1,46 +1,67 @@
 import React from 'react';
-import { PageProps } from 'gatsby';
-import { Layout } from './layout';
-import { productGrid, productWrapper } from 'style';
+import { Layout } from './Layout';
+import * as product from 'style/product';
+import { Image } from './Image';
 
-export const Product: React.FC<PageProps> = ({ data, ...rest }) => {
-  console.log(data);
+export interface ProductType {
+  id?: string;
+  title: string;
+  url: string;
+  niche: string;
+  askingPrice: string;
+  avgNetRevenue: string;
+  range: string;
+  monetization: string;
+  siteAge: string;
+  multiple: string;
+}
 
+export const Product: React.FC<ProductType> = ({
+  title,
+  url,
+  niche,
+  askingPrice,
+  avgNetRevenue,
+  range,
+  monetization,
+  siteAge,
+  multiple,
+}) => {
   return (
     <Layout>
-      <h1>{rest.title}</h1>
+      <h1>{title}</h1>
       <p>
-        {rest.url} | {rest.niche}
+        {url} | {niche}
       </p>
       <hr />
-      <div css={productWrapper}>
+      <div css={product.productWrapper}>
         <div>
-          <img src="../images/gatsby-astronaut.png" alt="" />
+          <Image />
         </div>
-        <div css={productGrid}>
+        <div css={product.productGrid}>
           <div>
             <h1>Asking Price</h1>
-            <p>{rest.askingPrice}</p>
+            <p>{askingPrice}</p>
           </div>
           <div>
             <h1>Avg net revenue</h1>
-            <p>{rest.avgNetRevenue}</p>
+            <p>{avgNetRevenue}</p>
           </div>
-          <div>
+          <div css={product.productItemMedium}>
             <h1>Range</h1>
-            <p>{rest.range}</p>
+            <p>{range}</p>
           </div>
-          <div>
+          <div css={product.productItemSmall}>
             <h1>Monetization</h1>
-            <p>{rest.monetization}</p>
+            <p>{monetization}</p>
           </div>
-          <div>
+          <div css={product.productItemSmall}>
             <h1>Site age</h1>
-            <p>{rest.siteAge}</p>
+            <p>{siteAge}</p>
           </div>
-          <div>
+          <div css={product.productItemSmall}>
             <h1>Multiple</h1>
-            <p>{rest.multiple}</p>
+            <p>{multiple}</p>
           </div>
         </div>
       </div>

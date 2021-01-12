@@ -43,7 +43,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   result.data.allProductsJson.nodes.forEach((product) => {
     createPage({
-      path: `/products/${slugify(product.title)}-˘${product.id}`,
+      path: `/products/${slugify(product.title)}-${product.id}`,
       component: path.resolve(`./src/templates/ProductDetails.tsx`),
       context: {
         product,

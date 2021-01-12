@@ -1,19 +1,6 @@
 import { PageProps } from 'gatsby';
 import React from 'react';
-import { Product } from 'components';
-
-export interface ProductType {
-  id: string;
-  title: string;
-  url: string;
-  niche: string;
-  askingPrice: string;
-  avgNetRevenue: string;
-  range: string;
-  monetization: string;
-  siteAge: string;
-  multiple: string;
-}
+import { Product, ProductType } from 'components';
 
 const ProductDetails: React.FC<
   PageProps<unknown, { product: ProductType }>

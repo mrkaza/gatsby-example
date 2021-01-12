@@ -3,24 +3,29 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-export const Image = ({ ...rest }) => {
-  //   const data = useStaticQuery(graphql`
-  //     query {
-  //       productImage: file(relativePath: { eq: 'gatsby-astronaut.png' }) {
-  //         childImageSharp {
-  //           fluid(maxWidth: 514) {
-  //             ...GatsbyImageSharpFluid
-  //           }
-  //         }
-  //       }
-  //     }
-  //   `);
+export const Image = () => {
+  // const path = 'gatsby-astronaut.png';
 
-  const data = useStaticQuery(graphql);
+  const data = useStaticQuery(graphql`
+    query Images {
+      file(relativePath: { eq: "gatsby-astronaut.png" }) {
+        childImageSharp {
+          fluid {
+            srcWebp
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
 
-  if (!data?.placeholderImage?.childImageSharp?.fluid) {
+  console.log(data.file.childImageSharp.fluid);
+
+  if (!data?.file?.childImageSharp?.fluid) {
     return <div>Picture not found</div>;
   }
 
-  return <Img fluid={data.productImage.childImageSharp.fluid} />;
+  return <Img fluid={data.file.childImageSharp.fluid} />;
+
+  // return <div>heeej</div>;
 };
